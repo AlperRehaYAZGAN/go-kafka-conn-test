@@ -16,17 +16,39 @@ Then, you can run the application with the following command:
 - Example usage of consumer:
 ```sh
 # template
-KAFKA_URL="kafka://username:password@host:port/partition" SASL_ENABLED=true KAFKA_CG="consumer-group" KAFKA_TOPIC="topic" ROLE="consumer" go run main.go
+KAFKA_URL="kafka://username:password@host:port/partition" \
+    SASL_ENABLED=true \
+    KAFKA_CG="consumer-group" \
+    KAFKA_TOPIC="topic" \
+    ROLE="consumer" \
+    go run main.go
+
 # example
-KAFKA_URL="kafka://app:apppwd@localhost:9092/0" SASL_ENABLED=false KAFKA_CG="mail-sender" KAFKA_TOPIC="send-mail" ROLE="consumer" go run main.go
+KAFKA_URL="kafka://app:apppwd@localhost:9092/0" \
+    SASL_ENABLED=false \
+    KAFKA_CG="mail-sender" \
+    KAFKA_TOPIC="send-mail" \
+    ROLE="consumer" \
+    go run main.go
+
 ```
 
 - Example usage of producer:
 ```sh
 # template
-KAFKA_URL="kafka://username:password@host:port/partition" SASL_ENABLED=true KAFKA_TOPIC="topic" ROLE="producer" go run main.go
+KAFKA_URL="kafka://username:password@host:port/partition" \
+    SASL_ENABLED=true \
+    KAFKA_TOPIC="topic" \
+    ROLE="producer" \
+    go run main.go
+
 # example
-KAFKA_URL="kafka://app:apppwd@localhost:9092/0" SASL_ENABLED=false KAFKA_TOPIC="send-mail" ROLE="producer" go run main.go
+KAFKA_URL="kafka://app:apppwd@localhost:9092/0" \
+    SASL_ENABLED=false \
+    KAFKA_TOPIC="send-mail" \
+    ROLE="producer" \
+    go run main.go
+
 ```
 
 You can run seperate terminals for consumer and producer.
